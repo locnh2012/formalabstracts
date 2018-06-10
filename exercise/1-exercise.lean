@@ -4,7 +4,7 @@ open set
 def isPrime (n : ℕ) : Prop := (n ≥ 2) ∧ (∀ m : ℕ, m ≥ 1 ∧ m ∣ n → (m = 1 ∨ m =n))
 #check isPrime
 
-def twinPrime(p : ℕ) : Prop := isPrime(p) ∧ (∃ q : ℕ, q = p + 2 ∧ isPrime(q))
+def twinPrime(p : ℕ) : Prop := isPrime(p) ∧ (∃ q : ℕ, (q = p + 2 ∨ q = p - 2) ∧ isPrime(q))
 #check twinPrime
 
 theorem infinite_twin_prime: ∀ n : ℕ, ∃ p, p ≥ n ∧ twinPrime(p) :=
