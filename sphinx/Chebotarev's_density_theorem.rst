@@ -5,7 +5,7 @@ This article gives a formal statement of the Chebotarev density theorem.  For Wi
 description, see
 `Chebotarev density theorem <https://en.wikipedia.org/wiki/Chebotarev%27s_density_theorem>`_.
 
-informally 
+Informal statement
 
   Let L be a finite Galois extension of a number field K
   with Galois group G.
@@ -15,7 +15,7 @@ informally
   is C has density
   # C / # G . 
 
-preformally ::
+.. code-block:: text
 
   notation:
   (K : number field)
@@ -47,13 +47,10 @@ Definition Links
 
 * prime means a prime ideal in the ring of integers of K.
   
-* The density refers to `Dirichlet density
-  <https://en.wikipedia.org/wiki/Dirichlet_density>`_ with respect to
-  the `Dedekind zeta function <https://en.wikipedia.org/wiki/Dedekind_zeta_function>`_.  Unfortunately,
-  the definition in wiki only gives the density for sets of rational
-  primes.  The wiki article needs to be extended to number fields.
-  A suitable reference is
+* The density refers to `analytic density
+  <https://en.wikipedia.org/wiki/Dirichlet_density>`_ as in
   `Lenstra's note <http://websites.math.leidenuniv.nl/algebra/Lenstra-Chebotarev.pdf>`_.
+  (Wikipedia has been updated.)
 
 * The
   Dirichlet density is a non-negative real number.  The right-hand

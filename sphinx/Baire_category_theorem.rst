@@ -1,50 +1,64 @@
-Baire Category Theorem.
------------------------
+
+.. highlight:: lean
+
+Baire Category Theorem
+======================
 
 This article gives a formal statement of the Baire category theorem.  For wikipedia's
 description, see `Baire category theorem <https://en.wikipedia.org/wiki/Baire_category_theorem>`_
 
 The following statements comprise the Baire category theorem.
 
-informal **Baire category theorem (BCT1-a)** 
+Informal statement
+------------------
+
+- informal **Baire category theorem (BCT1-a)** 
 
    Every [complete] [metric space] is a [Baire] [topological space].
 
-preformal :: 
-  
-  theorem Baire_category_theorem_BCT1_a :=
-  ∀ (X : complete, metric space), Baire X. 
+   .. code-block:: text
+		
+       notation:
+       (X : complete, metric space)
 
-informal **Baire category theorem (BCT1-b)**  
+       theorem Baire_category_theorem_BCT1_a :=
+       Baire X.
+     
+
+- informal **Baire category theorem (BCT1-b)**  
   
    Every [topological space] which is [homeomorphic] to an [open] subset of a
    [complete] [pseudometric space] is a [Baire] [topological space].
 
-preformal    ::
+   .. code-block:: text
+
+     notation:
+     (X : topological space)
+     (S : pseudometric space)
+     (U : open, subset S)
+     (_ : homeomorphic X U)
+
+     theorem Baire_category_theorem_BCT1_b :=
+     Baire X.
+
+- informal **Baire category theorem (BCT2)**   
   
-   theorem Baire_category_theorem_BCT1_b :=
-   ∀ (X : topological space), (∃ (S : pseudometric space), ∃ U,
-   open S U ∧ homeomorphic X U) → Baire X.
+  Every [locally compact] [Hausdorff] [topological space] is a [Baire] [topological space]. 
 
-informal **Baire category theorem BCT2**   
-  
-   Every [locally compact] [Hausdorff] [topological space] is a [Baire] [topological space]. 
+  .. code-block:: text
 
-preformal    ::
-  
-   ∀ (X : locally compact, Hausdorff, topological space), Baire X.
+     notation:
+     (X : locally compact, Hausdorff, topological space)
 
-informal **Baire category theorem BCT3** 
-  
-   A [non-empty] [complete] [metric space] is not the [countable union] of [nowhere-dense] [closed sets].
-
-preformal      ::
-  
-   ∀ (X : nonempty, complete, metric space), ¬∃ F,
-   countable F ∧ every nowhere-dense F ∧ every closed F ∧ X = ⋃ F.
+     theorem Baire_category_BCT2 :=
+     Baire X.
 
 
-notes
-=====
+Notes
+-----
 
 * A topological space is Baire if every countable intersection of open dense sets is dense.
+* The definitions of `Cauchy and completeness <https://www.math.wustl.edu/~freiwald/ch4.pdf>`_
+  apply to both metric and pseudometric spaces.  Wikipedia only discusses completeness for metric spaces.
+ 
+ 
