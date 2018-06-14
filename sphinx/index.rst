@@ -37,7 +37,7 @@ Hello everybody in the world!
    :maxdepth: 1
    :caption: Definitions:
 
-   unit_group.rst	     
+   unit_group.rst
 
 
 Indices and tables
